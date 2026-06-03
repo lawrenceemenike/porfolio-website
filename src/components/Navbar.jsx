@@ -3,7 +3,7 @@ import { portfolioData } from '../data/portfolioData';
 export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-[#0a0a0a]/90 backdrop-blur-md border-b border-white/5">
-      <div className="container-max flex items-center justify-between h-16">
+      <div className="max-w-6xl mx-auto px-6 md:px-8 flex items-center justify-between h-16">
         <a href="#home" className="text-white font-serif font-semibold text-lg tracking-wider">
           {portfolioData.header.name}
         </a>

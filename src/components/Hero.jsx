@@ -2,7 +2,7 @@ import { portfolioData } from '../data/portfolioData';
 
 export default function Hero() {
   return (
-    <section id="home" className="max-w-6xl mx-auto px-6 pt-24 pb-16 md:pt-32 md:pb-20 flex flex-col justify-start md:justify-center min-h-[75vh]">
+    <section id="home" className="max-w-6xl mx-auto px-6 md:px-8 pt-24 pb-16 md:pt-32 md:pb-20 flex flex-col justify-start md:justify-center min-h-[75vh]">
       
       {/* The Kicker: Margin-bottom tightened to mb-4 to group it logically with the header */}
       <p className="font-mono text-xs md:text-sm uppercase tracking-[0.2em] text-gray-400 mb-4 md:mb-5">
