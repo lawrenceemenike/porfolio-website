@@ -1,6 +1,6 @@
 const MyFocus = () => {
   return (
-    <section id="focus" className="max-w-6xl mx-auto px-6 md:px-8 py-20 md:py-32 border-t border-borderMuted">
+    <section id="focus" className="max-w-6xl mx-auto px-6 md:px-8 pt-12 pb-20 md:pt-16 md:pb-32 border-t border-borderMuted">
       
       {/* Text Container: Constrained to max-w-4xl for optimal reading measure */}
       <div className="max-w-4xl">
