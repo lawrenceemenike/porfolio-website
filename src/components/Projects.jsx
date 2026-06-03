@@ -13,31 +13,34 @@ const Projects = () => {
   return (
     <section id="projects" className="max-w-6xl mx-auto px-6 md:px-8 pt-12 pb-20 md:pt-16 md:pb-32 border-t border-borderMuted relative">
       
-      <div className="flex justify-between items-end mb-12">
-        <h2 className="font-serif text-3xl md:text-5xl text-white tracking-tight">Projects</h2>
-        <a href="https://github.com/lawrenceemenike" target="_blank" rel="noreferrer" className="font-mono text-xs text-gray-400 hover:text-white transition-colors">
-          View all on GitHub &rarr;
-        </a>
-      </div>
+      <div className="mb-12"><h2 className="font-serif text-3xl md:text-5xl text-white tracking-tight">Projects</h2></div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
         {projectsData.map((project) => (
           <div 
             key={project.id}
-            onClick={() => setSelectedProject(project)}
-            className="border border-borderMuted bg-[#0A0A0A] p-6 rounded-md cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:border-gray-500 hover:shadow-2xl hover:shadow-white/5 flex flex-col justify-between min-h-[250px] group"
+            onClick={() => project.isPlaceholder ? null : setSelectedProject(project)}
+            className={`border border-borderMuted bg-[#0A0A0A] p-6 rounded-md transition-all duration-300 flex flex-col justify-between min-h-[250px] group ${project.isPlaceholder ? 'opacity-40 cursor-default border-dashed' : 'cursor-pointer hover:-translate-y-2 hover:border-gray-500 hover:shadow-2xl hover:shadow-white/5'}`}
           >
             <div>
               <h3 className="font-serif text-xl text-white mb-3 leading-tight group-hover:text-gray-200">{project.title}</h3>
               <p className="font-sans text-sm text-gray-500 leading-relaxed mb-6">{project.short_desc}</p>
             </div>
-            <div className="font-mono text-[10px] text-gray-600 uppercase tracking-widest flex flex-wrap gap-2">
-              {project.tech_stack.slice(0, 3).map((tech, i) => (
-                <span key={i} className="bg-borderMuted/30 px-2 py-1 rounded">{tech}</span>
-              ))}
-            </div>
+            {!project.isPlaceholder && (
+              <div className="font-mono text-[10px] text-gray-600 uppercase tracking-widest flex flex-wrap gap-2">
+                {project.tech_stack.slice(0, 3).map((tech, i) => (
+                  <span key={i} className="bg-borderMuted/30 px-2 py-1 rounded">{tech}</span>
+                ))}
+              </div>
+            )}
           </div>
         ))}
+      </div>
+
+      <div className="flex justify-center w-full">
+        <a href="https://github.com/lawrenceemenike" target="_blank" rel="noreferrer" className="font-mono text-sm text-gray-400 hover:text-white border-b border-gray-600 hover:border-white transition-all pb-1 uppercase tracking-widest">
+          View all on GitHub &rarr;
+        </a>
       </div>
 
       {selectedProject && (

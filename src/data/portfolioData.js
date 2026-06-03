@@ -37,7 +37,20 @@ export const projectsData = [
       architecture: "Hybrid vector search decoupled from core FastAPI backend.",
       security: "Role-based access controls mapped directly to corporate SSO integrations."
     }
-  }
+  },
+  { id: 4, title: "Next Terminal Compiling...", short_desc: "Architectural blueprint in progress. System deployment scheduled.", tech_stack: ["Awaiting Stack"], isPlaceholder: true },
+  { id: 5, title: "Next Terminal Compiling...", short_desc: "Architectural blueprint in progress. System deployment scheduled.", tech_stack: ["Awaiting Stack"], isPlaceholder: true },
+  { id: 6, title: "Next Terminal Compiling...", short_desc: "Architectural blueprint in progress. System deployment scheduled.", tech_stack: ["Awaiting Stack"], isPlaceholder: true },
+  { id: 7, title: "Next Terminal Compiling...", short_desc: "Architectural blueprint in progress. System deployment scheduled.", tech_stack: ["Awaiting Stack"], isPlaceholder: true },
+  { id: 8, title: "Next Terminal Compiling...", short_desc: "Architectural blueprint in progress. System deployment scheduled.", tech_stack: ["Awaiting Stack"], isPlaceholder: true },
+  { id: 9, title: "Next Terminal Compiling...", short_desc: "Architectural blueprint in progress. System deployment scheduled.", tech_stack: ["Awaiting Stack"], isPlaceholder: true },
+  { id: 10, title: "Next Terminal Compiling...", short_desc: "Architectural blueprint in progress. System deployment scheduled.", tech_stack: ["Awaiting Stack"], isPlaceholder: true },
+  { id: 11, title: "Next Terminal Compiling...", short_desc: "Architectural blueprint in progress. System deployment scheduled.", tech_stack: ["Awaiting Stack"], isPlaceholder: true },
+  { id: 12, title: "Next Terminal Compiling...", short_desc: "Architectural blueprint in progress. System deployment scheduled.", tech_stack: ["Awaiting Stack"], isPlaceholder: true },
+  { id: 13, title: "Next Terminal Compiling...", short_desc: "Architectural blueprint in progress. System deployment scheduled.", tech_stack: ["Awaiting Stack"], isPlaceholder: true },
+  { id: 14, title: "Next Terminal Compiling...", short_desc: "Architectural blueprint in progress. System deployment scheduled.", tech_stack: ["Awaiting Stack"], isPlaceholder: true },
+  { id: 15, title: "Next Terminal Compiling...", short_desc: "Architectural blueprint in progress. System deployment scheduled.", tech_stack: ["Awaiting Stack"], isPlaceholder: true },
+  { id: 16, title: "Next Terminal Compiling...", short_desc: "Architectural blueprint in progress. System deployment scheduled.", tech_stack: ["Awaiting Stack"], isPlaceholder: true }
 ];
 
 export const journeyData = [
