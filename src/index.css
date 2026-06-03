@@ -26,3 +26,11 @@
     @apply max-w-5xl mx-auto px-6 md:px-12;
   }
 }
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

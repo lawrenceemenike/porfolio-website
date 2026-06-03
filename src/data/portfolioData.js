@@ -1,3 +1,16 @@
+export const journeyData = [
+  { year: "2025 - PRESENT", role: "AI Strategist & Architect", company: "Nelc Digital" },
+  { year: "2024 - 2025", role: "AI Engineer", company: "Omdena" },
+  { year: "2022 - 2024", role: "Cognitive Experience Analyst", company: "Ricoh Europe Plc" },
+  { year: "2018 - 2022", role: "Commercial Analyst", company: "Ricoh Europe Plc" },
+  { year: "2020 - 2021", role: "Co-Founder", company: "Botbank.io" },
+  { year: "2018", role: "Business Improvement & Monitoring Officer", company: "London Borough of Tower Hamlets" },
+  { year: "2018", role: "Data Analyst", company: "S2M Ltd" },
+  { year: "2017", role: "Principal Consultant", company: "Nextzon Business Services" },
+  { year: "2016", role: "SA to CEO (Strategic Planning & Cost Control)", company: "Enikkom Construction Limited" },
+  { year: "2009 - 2013", role: "Commercial Banking Officer", company: "Access Bank Plc" }
+];
+
 export const portfolioData = {
   header: {
     name: "Lawrence Emenike",
@@ -9,32 +22,7 @@ export const portfolioData = {
     linkedin: "https://linkedin.com/in/emeniken",
     github: "https://github.com/lawrenceemenike"
   },
-  journey: [
-    {
-      role: "Lead AI Consultant",
-      company: "Enterprise AI Firm",
-      period: "2023 - Present",
-      description: "Driving commercial intelligence strategy and architectural decisions for enterprise AI adoption."
-    },
-    {
-      role: "Co-Founder & Head of Product",
-      company: "AI Startup",
-      period: "2021 - 2023",
-      description: "Led product vision, multimodal AI implementations, and scaled engineering operations."
-    },
-    {
-      role: "Strategic Consulting",
-      company: "Global Consulting Group",
-      period: "2018 - 2021",
-      description: "Advised Fortune 500 clients on digital transformation and emerging tech integrations."
-    },
-    {
-      role: "Corporate Banking",
-      company: "Tier 1 Bank",
-      period: "2015 - 2018",
-      description: "Structured corporate finance deals and optimized financial models with data intelligence."
-    }
-  ],
+
   focus: {
     title: "Commercial Intelligence",
     description: "My thesis centers on bridging the gap between traditional corporate strategy and modern AI orchestration. I build deterministic, high-trust AI systems that prioritize measurable business outcomes, moving beyond prototyping into enterprise-grade deployment."
