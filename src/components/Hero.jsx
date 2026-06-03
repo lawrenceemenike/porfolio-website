@@ -10,7 +10,7 @@ export default function Hero() {
       </p>
 
       {/* The Main Thesis: Massive, serif, tightly tracked with strategic italics */}
-      <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl text-white leading-[1.1] tracking-tight mb-12">
+      <h1 className="font-serif text-3xl md:text-5xl lg:text-[3.5rem] text-white leading-tight tracking-tight mb-10 max-w-4xl">
         Architecting <span className="italic text-gray-300">secure, governed</span> commercial intelligence systems that translate cross-sector complexity into <span className="italic text-gray-300">structured intelligence</span> for strategic decision-making.
       </h1>
 
