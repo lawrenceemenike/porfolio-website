@@ -1,46 +1,104 @@
-import { portfolioData } from '../data/portfolioData';
+import { useState, useEffect } from 'react';
+import { projectsData } from '../data/portfolioData';
 
-export default function Projects() {
+const Projects = () => {
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  // Lock body scroll when modal is open
+  useEffect(() => {
+    if (selectedProject) document.body.style.overflow = 'hidden';
+    else document.body.style.overflow = 'auto';
+  }, [selectedProject]);
+
   return (
-    <section id="projects" className="section-padding border-t border-white/10">
-      <div className="container-max">
-        <div className="flex items-end justify-between mb-12">
-          <h2 className="text-3xl font-serif font-bold">Projects</h2>
-          <a 
-            href={portfolioData.socials.github} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-sm text-gray-400 hover:text-white transition-colors"
-          >
-            View all on GitHub →
-          </a>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {portfolioData.projects.map((project, index) => (
-            <a 
-              key={index}
-              href={project.link}
-              className="block p-6 rounded-lg border border-white/10 bg-surface/20 hover:bg-white/5 hover:border-white/20 transition-all duration-300"
-            >
-              <h3 className="text-xl font-serif font-semibold mb-3">{project.title}</h3>
-              <p className="font-sans text-gray-400 text-sm mb-6 leading-relaxed">
-                {project.description}
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {project.techStack.map((tech, techIdx) => (
-                  <span 
-                    key={techIdx} 
-                    className="font-mono text-xs uppercase tracking-widest font-medium text-gray-500 bg-white/5 px-2 py-1 rounded"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </a>
-          ))}
-        </div>
+    <section id="projects" className="max-w-6xl mx-auto px-6 md:px-8 pt-12 pb-20 md:pt-16 md:pb-32 border-t border-borderMuted relative">
+      
+      <div className="flex justify-between items-end mb-12">
+        <h2 className="font-serif text-3xl md:text-5xl text-white tracking-tight">Projects</h2>
+        <a href="https://github.com/lawrenceemenike" target="_blank" rel="noreferrer" className="font-mono text-xs text-gray-400 hover:text-white transition-colors">
+          View all on GitHub &rarr;
+        </a>
       </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {projectsData.map((project) => (
+          <div 
+            key={project.id}
+            onClick={() => setSelectedProject(project)}
+            className="border border-borderMuted bg-[#0A0A0A] p-6 rounded-md cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:border-gray-500 hover:shadow-2xl hover:shadow-white/5 flex flex-col justify-between min-h-[250px] group"
+          >
+            <div>
+              <h3 className="font-serif text-xl text-white mb-3 leading-tight group-hover:text-gray-200">{project.title}</h3>
+              <p className="font-sans text-sm text-gray-500 leading-relaxed mb-6">{project.short_desc}</p>
+            </div>
+            <div className="font-mono text-[10px] text-gray-600 uppercase tracking-widest flex flex-wrap gap-2">
+              {project.tech_stack.slice(0, 3).map((tech, i) => (
+                <span key={i} className="bg-borderMuted/30 px-2 py-1 rounded">{tech}</span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {selectedProject && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6">
+          
+          <div 
+            className="absolute inset-0 bg-black/90 backdrop-blur-sm cursor-pointer"
+            onClick={() => setSelectedProject(null)}
+          ></div>
+          
+          <div className="relative bg-[#121212] border border-borderMuted w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-lg shadow-2xl z-10 custom-scrollbar">
+            
+            <button 
+              onClick={() => setSelectedProject(null)}
+              className="absolute top-6 right-6 text-gray-500 hover:text-white font-mono text-sm tracking-widest z-20"
+            >
+              [CLOSE]
+            </button>
+
+            <div className="p-8 md:p-12">
+              <h2 className="font-serif text-3xl md:text-4xl text-white mb-4 pr-12">{selectedProject.title}</h2>
+              
+              <div className="font-mono text-xs text-accentGold uppercase tracking-widest mb-8 flex gap-4">
+                <a href={selectedProject.github_link} target="_blank" rel="noreferrer" className="hover:text-white border-b border-accentGold/30 pb-1">Master Repo &rarr;</a>
+              </div>
+
+              {selectedProject.youtube_link && (
+                <div className="relative w-full aspect-video mb-10 bg-black border border-borderMuted rounded-md overflow-hidden">
+                  <iframe 
+                    src={selectedProject.youtube_link} 
+                    className="absolute top-0 left-0 w-full h-full"
+                    allowFullScreen
+                    title={`${selectedProject.title} Demo`}
+                  ></iframe>
+                </div>
+              )}
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-borderMuted pt-8">
+                
+                <div>
+                  <h4 className="font-mono text-xs text-white uppercase tracking-widest mb-3">Commercial Impact</h4>
+                  <p className="font-sans text-sm text-gray-400 leading-relaxed">{selectedProject.caio_perspective?.commercial}</p>
+                </div>
+                
+                <div>
+                  <h4 className="font-mono text-xs text-white uppercase tracking-widest mb-3">Architecture</h4>
+                  <p className="font-sans text-sm text-gray-400 leading-relaxed">{selectedProject.caio_perspective?.architecture}</p>
+                </div>
+                
+                <div>
+                  <h4 className="font-mono text-xs text-white uppercase tracking-widest mb-3">Governance & Security</h4>
+                  <p className="font-sans text-sm text-gray-400 leading-relaxed">{selectedProject.caio_perspective?.security}</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
-}
+};
+
+export default Projects;
