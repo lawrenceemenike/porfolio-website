@@ -14,6 +14,9 @@ export default {
         primary: '#ffffff',
         secondary: '#a3a3a3',
         accent: '#3b82f6',
+        borderMuted: '#ffffff1a',
+        cardBg: '#111111',
+        accentGold: '#d4af37',
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
