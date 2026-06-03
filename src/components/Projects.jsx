@@ -5,7 +5,7 @@ export default function Projects() {
     <section id="projects" className="section-padding border-t border-white/10">
       <div className="container-max">
         <div className="flex items-end justify-between mb-12">
-          <h2 className="text-3xl font-bold">Projects</h2>
+          <h2 className="text-3xl font-serif font-bold">Projects</h2>
           <a 
             href={portfolioData.socials.github} 
             target="_blank" 
@@ -23,15 +23,15 @@ export default function Projects() {
               href={project.link}
               className="block p-6 rounded-lg border border-white/10 bg-surface/20 hover:bg-white/5 hover:border-white/20 transition-all duration-300"
             >
-              <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
-              <p className="text-gray-400 text-sm mb-6 leading-relaxed">
+              <h3 className="text-xl font-serif font-semibold mb-3">{project.title}</h3>
+              <p className="font-sans text-gray-400 text-sm mb-6 leading-relaxed">
                 {project.description}
               </p>
               <div className="flex flex-wrap gap-2">
                 {project.techStack.map((tech, techIdx) => (
                   <span 
                     key={techIdx} 
-                    className="text-xs font-medium text-gray-500 bg-white/5 px-2 py-1 rounded"
+                    className="font-mono text-xs uppercase tracking-widest font-medium text-gray-500 bg-white/5 px-2 py-1 rounded"
                   >
                     {tech}
                   </span>
