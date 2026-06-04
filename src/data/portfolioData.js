@@ -6,10 +6,20 @@ export const projectsData = [
     tech_stack: ["LangGraph", "Llama 3.2", "XGBoost", "Microsoft Agent Governance"],
     github_link: "https://github.com/lawrenceemenike",
     youtube_link: "https://www.youtube.com/embed/PLACEHOLDER_ID",
-    caio_perspective: {
-      commercial: "Eliminated margin erosion by replacing static pricing matrices with a dynamic inference engine. Directly tied non-deterministic LLM reasoning to deterministic P&L guardrails.",
-      architecture: "Decoupled cognitive reasoning (LangGraph/Llama) from mathematical execution (XGBoost). Implemented local MLflow tracking for unit-economic monitoring of inference costs.",
-      security: "Designed under a Zero-Trust architecture adhering to NIST AI RMF. Integrated prompt-injection defense layers and strict role-based access control (RBAC) for agentic execution."
+    case_study: {
+      executive_summary: "Deployed a local, multi-agent inference engine that replaces static pricing matrices with dynamic, mathematically constrained pricing orchestration.",
+      business_problem: "Commercial teams lacked visibility into pricing anomalies across regions, resulting in margin erosion and slow reaction times to market shifts.",
+      why_it_matters: "Pricing is the most direct lever for P&L impact. Automating this with deterministic guardrails protects margins while scaling operational throughput.",
+      my_role: [
+        { role: "AI Architect", action: "Designed the decoupled cognitive and mathematical execution layers." },
+        { role: "Product Owner", action: "Defined the unit-economic constraints and managed the 90-day deployment sprint." }
+      ],
+      discovery_process: "Conducted stakeholder interviews with commercial directors to map existing manual pricing workflows and identify latency bottlenecks in their decision matrix.",
+      solution_architecture: "Decoupled architecture: LangGraph orchestrates the reasoning agents (Llama 3.2), while XGBoost handles the deterministic mathematical execution and pricing output.",
+      governance_security: "Engineered under strict Zero-Trust principles. Implemented robust prompt-injection defense layers, strict RBAC for human-in-the-loop approvals, and audit trails for every pricing inference.",
+      commercial_intel_layer: "Signals collected include real-time competitor API feeds and internal inventory metrics. The reasoning process forecasts demand elasticity before generating a final, governable pricing output.",
+      results: "Simulated outcomes demonstrate a 40% reduction in decision latency and a distinct protection of baseline margins through anomaly avoidance.",
+      lessons_learned: "Non-deterministic models cannot be trusted with financial math. Decoupling the LLM's reasoning from the actual mathematical calculation is mandatory for enterprise safety."
     }
   },
   {

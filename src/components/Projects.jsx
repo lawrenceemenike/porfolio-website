@@ -78,21 +78,66 @@ const Projects = () => {
                 </div>
               )}
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-borderMuted pt-8">
+              <div className="max-w-3xl mx-auto space-y-12 mt-12 text-gray-300 font-sans text-base leading-relaxed">
                 
-                <div>
-                  <h4 className="font-mono text-xs text-white uppercase tracking-widest mb-3">Commercial Impact</h4>
-                  <p className="font-sans text-sm text-gray-400 leading-relaxed">{selectedProject.caio_perspective?.commercial}</p>
+                <div className="space-y-6">
+                  <div>
+                    <h4 className="font-serif text-2xl text-white mb-2">1. Executive Summary</h4>
+                    <p>{selectedProject.case_study?.executive_summary}</p>
+                  </div>
+                  <div>
+                    <h4 className="font-serif text-2xl text-white mb-2">2. Business Problem</h4>
+                    <p>{selectedProject.case_study?.business_problem}</p>
+                  </div>
+                  <div>
+                    <h4 className="font-serif text-2xl text-white mb-2">3. Why It Matters</h4>
+                    <p>{selectedProject.case_study?.why_it_matters}</p>
+                  </div>
                 </div>
-                
+
                 <div>
-                  <h4 className="font-mono text-xs text-white uppercase tracking-widest mb-3">Architecture</h4>
-                  <p className="font-sans text-sm text-gray-400 leading-relaxed">{selectedProject.caio_perspective?.architecture}</p>
+                  <h4 className="font-serif text-2xl text-white mb-4">4. My Role</h4>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {selectedProject.case_study?.my_role?.map((r, idx) => (
+                      <div key={idx} className="bg-[#1A1A1A] border border-borderMuted p-4 rounded-md">
+                        <span className="font-mono text-xs text-accentGold uppercase tracking-widest block mb-2">{r.role}</span>
+                        <span className="text-sm">{r.action}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-                
-                <div>
-                  <h4 className="font-mono text-xs text-white uppercase tracking-widest mb-3">Governance & Security</h4>
-                  <p className="font-sans text-sm text-gray-400 leading-relaxed">{selectedProject.caio_perspective?.security}</p>
+
+                <div className="space-y-6">
+                  <div>
+                    <h4 className="font-serif text-2xl text-white mb-2">5. Discovery Process</h4>
+                    <p>{selectedProject.case_study?.discovery_process}</p>
+                  </div>
+                  <div>
+                    <h4 className="font-serif text-2xl text-white mb-2">6. Solution Architecture</h4>
+                    <p>{selectedProject.case_study?.solution_architecture}</p>
+                  </div>
+                </div>
+
+                <div className="space-y-6 p-6 border-l-2 border-accentGold bg-accentGold/5">
+                  <div>
+                    <h4 className="font-serif text-2xl text-white mb-2">7. Governance & Security</h4>
+                    <p>{selectedProject.case_study?.governance_security}</p>
+                  </div>
+                  <div className="mt-6">
+                    <h4 className="font-serif text-2xl text-white mb-2">8. Commercial Intelligence Layer</h4>
+                    <p>{selectedProject.case_study?.commercial_intel_layer}</p>
+                  </div>
+                </div>
+
+                <div className="space-y-6">
+                  <div>
+                    <h4 className="font-serif text-2xl text-white mb-2">9. Results</h4>
+                    <p className="font-medium text-white">{selectedProject.case_study?.results}</p>
+                  </div>
+                  <div>
+                    <h4 className="font-serif text-2xl text-white mb-2">10. Lessons Learned</h4>
+                    <p>{selectedProject.case_study?.lessons_learned}</p>
+                  </div>
                 </div>
 
               </div>
