@@ -22,45 +22,14 @@ export const projectsData = [
       lessons_learned: "Non-deterministic models cannot be trusted with financial math. Decoupling the LLM's reasoning from the actual mathematical calculation is mandatory for enterprise safety."
     }
   },
-  {
-    id: 2,
-    title: "Commercial Intel Data Pipeline",
-    short_desc: "A streaming data pipeline that feeds real-time market sentiment into strategy workflows.",
-    tech_stack: ["React", "Kafka", "PostgreSQL"],
-    github_link: "https://github.com/lawrenceemenike",
-    youtube_link: "",
-    caio_perspective: {
-      commercial: "Optimized lead times by 40% through real-time operational insights.",
-      architecture: "Event-driven architecture scaling autonomously with Kafka and PostgreSQL.",
-      security: "Encrypted data streams with robust authentication boundaries."
-    }
-  },
-  {
-    id: 3,
-    title: "Enterprise RAG Infrastructure",
-    short_desc: "Retrieval-Augmented Generation system designed for secure, internal corporate knowledge access.",
-    tech_stack: ["Vector DB", "FastAPI", "TypeScript"],
-    github_link: "https://github.com/lawrenceemenike",
-    youtube_link: "",
-    caio_perspective: {
-      commercial: "Reduced internal knowledge discovery time, accelerating strategic workflows.",
-      architecture: "Hybrid vector search decoupled from core FastAPI backend.",
-      security: "Role-based access controls mapped directly to corporate SSO integrations."
-    }
-  },
-  { id: 4, title: "Next Terminal Compiling...", short_desc: "Architectural blueprint in progress. System deployment scheduled.", tech_stack: ["Awaiting Stack"], isPlaceholder: true },
-  { id: 5, title: "Next Terminal Compiling...", short_desc: "Architectural blueprint in progress. System deployment scheduled.", tech_stack: ["Awaiting Stack"], isPlaceholder: true },
-  { id: 6, title: "Next Terminal Compiling...", short_desc: "Architectural blueprint in progress. System deployment scheduled.", tech_stack: ["Awaiting Stack"], isPlaceholder: true },
-  { id: 7, title: "Next Terminal Compiling...", short_desc: "Architectural blueprint in progress. System deployment scheduled.", tech_stack: ["Awaiting Stack"], isPlaceholder: true },
-  { id: 8, title: "Next Terminal Compiling...", short_desc: "Architectural blueprint in progress. System deployment scheduled.", tech_stack: ["Awaiting Stack"], isPlaceholder: true },
-  { id: 9, title: "Next Terminal Compiling...", short_desc: "Architectural blueprint in progress. System deployment scheduled.", tech_stack: ["Awaiting Stack"], isPlaceholder: true },
-  { id: 10, title: "Next Terminal Compiling...", short_desc: "Architectural blueprint in progress. System deployment scheduled.", tech_stack: ["Awaiting Stack"], isPlaceholder: true },
-  { id: 11, title: "Next Terminal Compiling...", short_desc: "Architectural blueprint in progress. System deployment scheduled.", tech_stack: ["Awaiting Stack"], isPlaceholder: true },
-  { id: 12, title: "Next Terminal Compiling...", short_desc: "Architectural blueprint in progress. System deployment scheduled.", tech_stack: ["Awaiting Stack"], isPlaceholder: true },
-  { id: 13, title: "Next Terminal Compiling...", short_desc: "Architectural blueprint in progress. System deployment scheduled.", tech_stack: ["Awaiting Stack"], isPlaceholder: true },
-  { id: 14, title: "Next Terminal Compiling...", short_desc: "Architectural blueprint in progress. System deployment scheduled.", tech_stack: ["Awaiting Stack"], isPlaceholder: true },
-  { id: 15, title: "Next Terminal Compiling...", short_desc: "Architectural blueprint in progress. System deployment scheduled.", tech_stack: ["Awaiting Stack"], isPlaceholder: true },
-  { id: 16, title: "Next Terminal Compiling...", short_desc: "Architectural blueprint in progress. System deployment scheduled.", tech_stack: ["Awaiting Stack"], isPlaceholder: true }
+  // Automatically generate the 15 placeholders for the 4x4 grid
+  ...Array.from({ length: 15 }, (_, i) => ({
+    id: i + 2,
+    title: "Next Terminal Compiling...",
+    short_desc: "Architectural blueprint in progress. System deployment scheduled.",
+    tech_stack: ["Awaiting Stack"],
+    isPlaceholder: true
+  }))
 ];
 
 export const journeyData = [
