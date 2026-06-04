@@ -32,6 +32,30 @@ export const projectsData = [
   }))
 ];
 
+export const lxwrvnxData = [
+  {
+    id: 1,
+    title: "Street Photography",
+    slug: "street-photography",
+    desc: "High-contrast urban structural captures. Framing shadow, geometry, and the unfiltered truth of real-world environment layers.",
+    mediaType: "Photo Matrix",
+  },
+  {
+    id: 2,
+    title: "Visual Philosophy / Art",
+    slug: "visual-art",
+    desc: "Custom Diffusion architectures and fine-tuned latent spaces engineered to visualize complex, minimalist metaphysical concepts.",
+    mediaType: "Generative Canvas",
+  },
+  {
+    id: 3,
+    title: "Generative Music",
+    slug: "audio-synthesis",
+    desc: "Multi-stem electronic composition and rhythmic mathematical synthesis exploring dark ambient soundscapes.",
+    mediaType: "Audio Workspace",
+  }
+];
+
 export const journeyData = [
   { year: "2025 - PRESENT", role: "AI Strategist & Architect", company: "Nelc Digital" },
   { year: "2024 - 2025", role: "AI Engineer", company: "Omdena" },
@@ -62,23 +86,6 @@ export const portfolioData = {
     description: "My thesis centers on bridging the gap between traditional corporate strategy and modern AI orchestration. I build deterministic, high-trust AI systems that prioritize measurable business outcomes, moving beyond prototyping into enterprise-grade deployment."
   },
 
-  lxwrvnx: [
-    {
-      category: "AI Art",
-      title: "Generative Horizons",
-      description: "Exploring latent spaces and algorithmic aesthetics."
-    },
-    {
-      category: "AI Music",
-      title: "Neural Soundscapes",
-      description: "Harmonizing code and audio through generative models."
-    },
-    {
-      category: "Street Art Photography",
-      title: "Urban Textures",
-      description: "Capturing raw, unfiltered moments in urban environments."
-    }
-  ],
   blog: [
     {
       title: "The Architecture of Commercial Intelligence",
