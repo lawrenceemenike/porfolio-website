@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -7,8 +8,9 @@ import Projects from './components/Projects';
 import Lxwrvnx from './components/Lxwrvnx';
 import Blog from './components/Blog';
 import Contact from './components/Contact';
+import LxwrvnxGallery from './components/LxwrvnxGallery';
 
-function App() {
+function Home() {
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-gray-300 font-sans selection:bg-white/20">
       <Navbar />
@@ -26,6 +28,17 @@ function App() {
         <p>&copy; {new Date().getFullYear()} Lawrence Emenike. All rights reserved.</p>
       </footer>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/lxwrvnx/:slug" element={<LxwrvnxGallery />} />
+      </Routes>
+    </Router>
   );
 }
 
