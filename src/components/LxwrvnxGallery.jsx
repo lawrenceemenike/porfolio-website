@@ -18,7 +18,16 @@ const galleryContent = {
       id: i + 1,
       height: ['h-[300px]', 'h-[450px]', 'h-[600px]', 'h-[400px]', 'h-[700px]'][i % 5],
       imgSrc: "" 
-    }))
+    })),
+    outro: {
+      headline: "The inverse of determinism.",
+      body: [
+        "My daily operations are governed by strict unit economics, zero-trust architectures, and mathematical guardrails. But true intelligence—both human and artificial—requires a space for unstructured exploration.",
+        "This lab is where the enterprise guardrails come off. Whether mapping the raw geometry of the street or navigating the latent spaces of a diffusion model, I use these mediums to bypass logic and capture unfiltered signals."
+      ],
+      ctaText: "Explore Visual Philosophy",
+      ctaLink: "/lxwrvnx/visual-art"
+    }
   },
   "visual-art": {
     title: "Visual Philosophy",
@@ -34,7 +43,16 @@ const galleryContent = {
       id: i + 1,
       height: ['h-[500px]', 'h-[350px]', 'h-[600px]', 'h-[400px]', 'h-[650px]'][i % 5],
       imgSrc: ""
-    }))
+    })),
+    outro: {
+      headline: "Finding signal in the noise.",
+      body: [
+        "I spent years in high-level finance enforcing strict unit economics, followed by architecting deterministic AI systems. But the most complex systems are the ones we cannot easily quantify.",
+        "These visual experiments are my way of processing the non-deterministic variables of the world. By refining each output, I am searching for the exact moment the aesthetic feeling lands and nothing more needs to be said."
+      ],
+      ctaText: "Explore Generative Music",
+      ctaLink: "/lxwrvnx/audio-synthesis"
+    }
   }
 };
 
@@ -101,6 +119,55 @@ const LxwrvnxGallery = () => {
             )}
           </div>
         ))}
+      </div>
+
+      {/* ACT 4: Outro & CTA */}
+      <div className="max-w-7xl mx-auto mt-32 border-t border-borderMuted pt-24 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+        
+        <div className="lg:col-span-5 space-y-6 md:pr-8">
+          <p className="font-mono text-xs text-accentGold uppercase tracking-widest">Artist Statement</p>
+          <h2 className="font-serif text-3xl md:text-5xl text-white leading-tight tracking-tight mb-8">
+            {content.outro?.headline}
+          </h2>
+          <div className="space-y-6 font-sans text-sm md:text-base text-gray-400 leading-relaxed mb-10">
+            {content.outro?.body?.map((paragraph, idx) => (
+              <p key={idx}>{paragraph}</p>
+            ))}
+          </div>
+          <div className="pt-4">
+            <Link to={content.outro?.ctaLink} 
+              className="font-mono text-xs md:text-sm text-white hover:text-accentGold transition-colors border-b border-white hover:border-accentGold pb-2 uppercase tracking-widest inline-flex items-center gap-3"
+            >
+              {content.outro?.ctaText} <span className="text-accentGold text-lg leading-none">&rarr;</span>
+            </Link>
+          </div>
+        </div>
+
+        <div className="lg:col-span-7 grid grid-cols-2 gap-4 md:gap-6">
+          
+          <div className="space-y-4 md:space-y-6 pt-12 md:pt-20">
+            <div className="w-full h-[250px] md:h-[300px] bg-[#121212] border border-borderMuted hover:border-accentGold transition-colors relative group overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+              <span className="absolute bottom-4 left-4 font-mono text-[10px] text-gray-600 group-hover:text-accentGold z-20">OUTRO_NODE_1</span>
+            </div>
+            <div className="w-full h-[350px] md:h-[450px] bg-[#121212] border border-borderMuted hover:border-accentGold transition-colors relative group overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+              <span className="absolute bottom-4 left-4 font-mono text-[10px] text-gray-600 group-hover:text-accentGold z-20">OUTRO_NODE_2</span>
+            </div>
+          </div>
+          
+          <div className="space-y-4 md:space-y-6">
+            <div className="w-full h-[350px] md:h-[450px] bg-[#121212] border border-borderMuted hover:border-accentGold transition-colors relative group overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+              <span className="absolute bottom-4 left-4 font-mono text-[10px] text-gray-600 group-hover:text-accentGold z-20">OUTRO_NODE_3</span>
+            </div>
+            <div className="w-full h-[250px] md:h-[300px] bg-[#121212] border border-borderMuted hover:border-accentGold transition-colors relative group overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+              <span className="absolute bottom-4 left-4 font-mono text-[10px] text-gray-600 group-hover:text-accentGold z-20">OUTRO_NODE_4</span>
+            </div>
+          </div>
+        </div>
+
       </div>
 
     </div>
