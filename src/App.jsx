@@ -9,6 +9,7 @@ import Lxwrvnx from './components/Lxwrvnx';
 import Blog from './components/Blog';
 import Contact from './components/Contact';
 import LxwrvnxGallery from './components/LxwrvnxGallery';
+import LxwrvnxAudio from './components/LxwrvnxAudio';
 
 function Home() {
   return (
@@ -36,6 +37,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/lxwrvnx/audio-synthesis" element={<LxwrvnxAudio />} />
         <Route path="/lxwrvnx/:slug" element={<LxwrvnxGallery />} />
       </Routes>
     </Router>

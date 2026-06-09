@@ -114,3 +114,17 @@ export const portfolioData = {
     }
   ]
 };
+
+export const audioData = {
+  title: "Generative Music",
+  subtitle: "AUDIO SYNTHESIS // NEURAL SOUNDSCAPES",
+  philosophy: "Music is applied mathematics. In this workspace, I explore the intersection of deterministic sequencing and non-deterministic audio generation. By orchestrating algorithmic synthesis and neural models, I produce dark ambient soundscapes and rhythmic structures—bypassing traditional instrumentation to sculpt sound directly from logic.",
+  tracks: Array.from({ length: 12 }, (_, i) => ({
+    id: i + 1,
+    title: `Latent Frequency 0${i + 1}`,
+    duration: "03:45", // Placeholder
+    tech: "Diffusion + Logic Pro",
+    coverSrc: "", // For future public/lxwrvnx/music/cover-xx.jpg
+    embedUrl: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/PLACEHOLDER&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false" // Standard SoundCloud minimal iframe format
+  }))
+};
