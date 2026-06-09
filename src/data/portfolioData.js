@@ -128,3 +128,21 @@ export const audioData = {
     embedUrl: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/PLACEHOLDER&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false" // Standard SoundCloud minimal iframe format
   }))
 };
+
+export const articlesData = [
+  {
+    id: 1,
+    date: "OCT 12, 2026",
+    category: "AI STRATEGY",
+    title: "The Economics of Generative AI in Enterprise Environments",
+    link: "https://medium.com/@lawrenceemenike"
+  },
+  // Automatically generate 5 more placeholders
+  ...Array.from({ length: 5 }, (_, i) => ({
+    id: i + 2,
+    date: "TBD",
+    category: "SYSTEM ARCHITECTURE",
+    title: "Compiling Executive Memo...",
+    link: "https://medium.com/@lawrenceemenike"
+  }))
+];

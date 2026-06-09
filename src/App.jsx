@@ -6,7 +6,7 @@ import Journey from './components/Journey';
 import MyFocus from './components/MyFocus';
 import Projects from './components/Projects';
 import Lxwrvnx from './components/Lxwrvnx';
-import Blog from './components/Blog';
+import Insights from './components/Insights';
 import Contact from './components/Contact';
 import LxwrvnxGallery from './components/LxwrvnxGallery';
 import LxwrvnxAudio from './components/LxwrvnxAudio';
@@ -22,7 +22,7 @@ function Home() {
         <MyFocus />
         <Projects />
         <Lxwrvnx />
-        <Blog />
+        <Insights />
         <Contact />
       </main>
       <footer className="py-8 text-center text-sm text-gray-600 border-t border-white/5">
