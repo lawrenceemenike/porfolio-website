@@ -63,8 +63,11 @@ const Projects = () => {
             <div className="p-8 md:p-12">
               <h2 className="font-serif text-3xl md:text-4xl text-white mb-4 pr-12">{selectedProject.title}</h2>
               
-              <div className="font-mono text-xs text-accentGold uppercase tracking-widest mb-8 flex gap-4">
+              <div className="font-mono text-xs text-accentGold uppercase tracking-widest mb-8 flex gap-4 flex-wrap">
                 <a href={selectedProject.github_link} target="_blank" rel="noreferrer" className="hover:text-white border-b border-accentGold/30 pb-1">Master Repo &rarr;</a>
+                {selectedProject.screenshots_link && (
+                  <a href={selectedProject.screenshots_link} target="_blank" rel="noreferrer" className="hover:text-white border-b border-accentGold/30 pb-1">Project Screenshots &rarr;</a>
+                )}
               </div>
 
               {selectedProject.youtube_link && (
