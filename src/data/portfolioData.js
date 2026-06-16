@@ -22,8 +22,16 @@ export const projectsData = [
       lessons_learned: "Non-deterministic models cannot be trusted with financial math. Decoupling the LLM's reasoning from the actual mathematical calculation is mandatory for enterprise safety."
     }
   },
+  // Automatically generate the 14 placeholders for the 4x4 grid
+  ...Array.from({ length: 14 }, (_, i) => ({
+    id: i + 2,
+    title: "Next Terminal Compiling...",
+    short_desc: "Architectural blueprint in progress. System deployment scheduled.",
+    tech_stack: ["Awaiting Stack"],
+    isPlaceholder: true
+  })),
   {
-    id: 2,
+    id: 16,
     title: "Customer Lifetime Value Predictor",
     short_desc: "Agentic MLOps forecasting engine combining structured telemetry with local LLM evaluation to eliminate corporate financial planning blind spots.",
     tech_stack: [
@@ -62,15 +70,7 @@ export const projectsData = [
       results: "The engine demonstrated immediate clarity over traditional FP&A forecasts. For 'Vanguard Logistics', the quantitative baseline predicted a $76,650 CLV. However, the Context Node flagged a severe risk score of 0.75 due to a resigned technical champion and integration stalls. The cognitive graph overrode the baseline, compressing the forward CLV to $49,822 and violently restricting the Dynamic CAC Cap to $7,473 to prevent cash burn. Conversely, for 'Apex Financial Corp', the orchestrator validated a healthy risk score of 0.1, boosting the CLV to $215,942 with a $32,391 CAC Cap. This proves the system's ability to stabilize ledger forecasting variance using real-time qualitative context.",
       lessons_learned: "Non-deterministic LLM models cannot be blindly trusted to execute raw financial calculations. By forcefully decoupling the math from the language generation—and embedding a cryptographic SHA-256 audit trail alongside SHAP explainability matrices directly into the pipeline's MLflow artifacts—we transformed an unpredictable AI experiment into a hardened, boardroom-ready financial engine."
     }
-  },
-  // Automatically generate the 14 placeholders for the 4x4 grid
-  ...Array.from({ length: 14 }, (_, i) => ({
-    id: i + 3,
-    title: "Next Terminal Compiling...",
-    short_desc: "Architectural blueprint in progress. System deployment scheduled.",
-    tech_stack: ["Awaiting Stack"],
-    isPlaceholder: true
-  }))
+  }
 ];
 
 export const lxwrvnxData = [
