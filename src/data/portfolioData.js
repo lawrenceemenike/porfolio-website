@@ -22,14 +22,51 @@ export const projectsData = [
       lessons_learned: "Non-deterministic models cannot be trusted with financial math. Decoupling the LLM's reasoning from the actual mathematical calculation is mandatory for enterprise safety."
     }
   },
-  // Automatically generate the 14 placeholders for the 4x4 grid
-  ...Array.from({ length: 14 }, (_, i) => ({
+  // Automatically generate the 13 placeholders for the 4x4 grid
+  ...Array.from({ length: 13 }, (_, i) => ({
     id: i + 2,
     title: "Next Terminal Compiling...",
     short_desc: "Architectural blueprint in progress. System deployment scheduled.",
     tech_stack: ["Awaiting Stack"],
     isPlaceholder: true
   })),
+  {
+    id: 15,
+    title: "AccessBridge: Zero-Trust Community Resource Navigator",
+    short_desc: "A deterministic, multi-agent decision support engine connecting underserved communities to localized grants and skills training without AI hallucination.",
+    tech_stack: [
+      "Python",
+      "LangGraph",
+      "FastAPI",
+      "React (Vite)",
+      "Model Context Protocol (MCP)",
+      "Local LLMs (Ollama)"
+    ],
+    github_link: "https://github.com/lawrenceemenike/AccessBridge",
+    youtube_link: "https://www.youtube.com/embed/YOUR_VIDEO_ID",
+    screenshots_link: "https://github.com/lawrenceemenike/AccessBridge/tree/main/diagrams",
+    case_study: {
+      executive_summary: "Engineered a state-machine driven multi-agent system designed to safely intake highly unstructured, localized user profiles and output deterministic, verified community Action Plans. The system eliminates hallucination by strictly querying local Model Context Protocol (MCP) registries.",
+      business_problem: "Vulnerable communities fail to access public services due to bureaucratic fragmentation and language barriers (such as Nigerian Pidgin). Existing off-the-shelf chatbots hallucinate eligibility criteria and recklessly ingest sensitive Personal Identifiable Information (PII) into the cloud.",
+      why_it_matters: "By ensuring 100% data provenance and strict PII protection, this architecture is highly deployable for NGOs, state governments, and social enterprises looking to democratize capital access without assuming regulatory or PR risk.",
+      my_role: [
+        {
+          role: "AI Systems Architect",
+          action: "Designed the decoupled multi-agent LangGraph topology and the rigorous Zero-Trust security layers."
+        },
+        {
+          role: "Full-Stack Engineer",
+          action: "Built the interactive React Canvas UI featuring dynamic observability tracing and Last-Mile PDF/WhatsApp export tooling."
+        }
+      ],
+      discovery_process: "Discovered through community research that target users often abandon public service applications due to confusing interfaces, overly formal language requirements, and a lack of clear, step-by-step guidance.",
+      solution_architecture: "A cyclical LangGraph orchestrator governing five decoupled agents (Intake, Clarification, Discovery, Eligibility, Action Plan). The system uses implicit localization to translate dialects to strict JSON schemas, cross-referencing a localized mock registry.",
+      governance_security: "Zero-Trust architecture implemented via a 'PolicyInterceptorGate' that actively parses incoming payloads to mask or block PII (NINs, Phone Numbers, Medical Records) with a hard exception before it ever touches the LLM context window.",
+      commercial_intel_layer: "Aggregated user intake data and generated action plans provide caseworkers and NGO directors with measurable insights into regional resource demands, allowing them to track which grants and training programs are most heavily requested.",
+      results: "Successfully deployed a local, offline-capable prototype that translates regional dialects into structured schemas while maintaining 100% data deterministic safety via MCP.",
+      lessons_learned: "Standard conversational LLMs cannot be trusted with high-stakes public sector routing. Deterministic state machines (LangGraph) coupled with Zero-Trust API interceptors are non-negotiable requirements for safely deploying AI in the real world."
+    }
+  },
   {
     id: 16,
     title: "Customer Lifetime Value Predictor",

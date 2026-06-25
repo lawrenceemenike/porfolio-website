@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "expense-agent"
+version = "0.1.0"
+description = "Ambient expense approval agent"
+requires-python = ">=3.10"
+dependencies = [
+    "google-adk>=2.2.0",
+    "google-genai>=2.4.0"
+]
+
+[tool.setuptools]
+py-modules = ["agent", "config"]
