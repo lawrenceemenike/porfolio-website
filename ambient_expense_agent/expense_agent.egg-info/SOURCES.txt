@@ -1,8 +1,0 @@
-agent.py
-config.py
-pyproject.toml
-expense_agent.egg-info/PKG-INFO
-expense_agent.egg-info/SOURCES.txt
-expense_agent.egg-info/dependency_links.txt
-expense_agent.egg-info/requires.txt
-expense_agent.egg-info/top_level.txt
