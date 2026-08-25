@@ -161,9 +161,44 @@ export const projectsData = [
       lessons_learned: "Single-pass LLMs cannot be trusted for deep research. Multi-agent consensus loops paired with deterministic security interceptors and cost routers are mandatory for cost-effective enterprise AI operations."
     }
   },
-  // Automatically generate the 9 placeholders for the 4x4 grid
-  ...Array.from({ length: 9 }, (_, i) => ({
-    id: i + 6,
+  {
+    id: 6,
+    title: "Enterprise Cost-Optimized Model Router & Economic Engine",
+    short_desc: "High-throughput model routing engine optimizing LLM inference costs by dynamically balancing local edge SLMs and frontier API endpoints.",
+    tech_stack: [
+      "Python",
+      "FastAPI",
+      "Ollama",
+      "vLLM",
+      "OpenAI API",
+      "Pydantic"
+    ],
+    github_link: "https://github.com/lawrenceemenike/Cost-Optimized-Model-Router",
+    case_study: {
+      executive_summary: "Engineered an intelligent economic model router that dynamically evaluates LLM prompt complexity, context window size, and reasoning depth to route inference requests between local open-weight SLMs (Ollama/vLLM) and frontier cloud models (GPT-4o/Claude 3.5 Sonnet). The engine achieves up to 85% cost reduction across high-volume enterprise workloads with zero latency degradation for simple tasks.",
+      business_problem: "Uncontrolled frontier API token costs and inefficient model selection erode unit economics in enterprise AI applications. Routing basic classification, extraction, or low-complexity prompts to expensive $30+/M-token models wastes capital without improving response accuracy.",
+      why_it_matters: "Optimizing model routing at the infrastructure layer establishes predictable LLM unit economics and protects operational gross margins. Automating tier selection enables organizations to scale request volume 10x within static API budget constraints.",
+      my_role: [
+        {
+          role: "AI Infrastructure Architect",
+          action: "Designed the dynamic routing heuristics, token estimation algorithms, and fallback circuit breaker policies."
+        },
+        {
+          role: "Systems Engineer",
+          action: "Implemented the zero-dependency token estimator, Pydantic audit receipt generation, and async vLLM/Ollama integration."
+        }
+      ],
+      discovery_process: "Audited production LLM logs and discovered that over 70% of user queries were low-complexity tasks (formatting, simple classification, short summaries) that could be solved with identical accuracy by local 7B/8B models at zero incremental token cost.",
+      solution_architecture: "A high-performance FastAPI routing gateway evaluating incoming payloads through a 3-stage pipeline: zero-latency token estimation (word count x 1.3 heuristic), task intent classification (simple vs. high-reasoning/consensus), and context length evaluation (<8k tokens -> Local SLM, >=8k or complex reasoning -> Frontier API).",
+      governance_security: "Includes fail-closed circuit breakers for local model daemons, request rate-limiting, and structured Pydantic audit receipts (RoutingDecisionReceipt) recording model selection rationale, token counts, and cost savings for full financial auditing.",
+      commercial_intel_layer: "Tracks real-time inference cost savings, model usage distributions, and latency metrics. Emits telemetry data to facilitate monthly cloud financial management (FinOps) and API allocation audits.",
+      results: "Delivered up to 85% overall reduction in LLM inference spend across benchmark workloads, routing 75%+ of incoming traffic to local zero-cost SLMs while maintaining 100% SLA compliance for high-complexity queries.",
+      lessons_learned: "One-size-fits-all model deployment is economically unsustainable. Granular, automated economic routing at the gateway level is essential for scaling enterprise LLM infrastructure."
+    }
+  },
+  // Automatically generate the 8 placeholders for the 4x4 grid
+  ...Array.from({ length: 8 }, (_, i) => ({
+    id: i + 7,
     title: "Next Terminal Compiling...",
     short_desc: "Architectural blueprint in progress. System deployment scheduled.",
     tech_stack: ["Awaiting Stack"],
