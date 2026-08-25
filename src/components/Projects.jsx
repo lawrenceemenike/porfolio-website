@@ -70,9 +70,9 @@ const Projects = () => {
             </div>
             {!project.isPlaceholder && (
               <div className="flex items-center justify-between mt-auto gap-4">
-                <div className="font-mono text-[10px] text-gray-600 uppercase tracking-widest flex flex-wrap gap-1.5">
+                <div className="font-mono text-[10px] uppercase tracking-widest flex flex-wrap gap-1.5">
                   {project.tech_stack.slice(0, 3).map((tech, i) => (
-                    <span key={i} className="bg-borderMuted/30 px-2 py-0.5 rounded">{tech}</span>
+                    <span key={i} className="bg-white/5 border border-white/10 text-gray-300 px-2 py-0.5 rounded">{tech}</span>
                   ))}
                 </div>
                 <button
