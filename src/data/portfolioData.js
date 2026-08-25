@@ -44,7 +44,7 @@ export const projectsData = [
           action: "Designed the 5-agent micro-orchestration graph using Strands SDK and AWS Bedrock AgentCore, enforcing state machine isolation and optimistic locking."
         },
         {
-          role: "Cloud & MLOps Engineer",
+          role: "AI Engineer",
           action: "Provisioned the AWS infrastructure via CloudFormation, configured multi-domain Knowledge Base retrievers with ThreadPoolExecutor parallelism, and built 100% X-Ray/CloudWatch observability pipelines."
         }
       ],
