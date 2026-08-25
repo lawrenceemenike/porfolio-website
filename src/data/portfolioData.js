@@ -91,9 +91,44 @@ export const projectsData = [
       lessons_learned: "Probabilistic LLM guardrails are fundamentally insufficient for enterprise runtime safety. Governance must be executed deterministically at the system level via cryptographic proofs, local state machines, and immutable Merkle-DAG ledgers."
     }
   },
-  // Automatically generate the 11 placeholders for the 4x4 grid
-  ...Array.from({ length: 11 }, (_, i) => ({
-    id: i + 4,
+  {
+    id: 4,
+    title: "Enterprise AI Support Agent (Bedrock AgentCore & MCP)",
+    short_desc: "Production customer support agent utilizing Bedrock AgentCore, Model Context Protocol (MCP), sandboxed Code Interpreter, and dual-strategy long-term memory.",
+    tech_stack: [
+      "AWS Bedrock",
+      "AgentCore SDK",
+      "Model Context Protocol (MCP)",
+      "AWS Lambda",
+      "API Gateway",
+      "Code Interpreter"
+    ],
+    github_link: "https://github.com/lawrenceemenike/AI-Support-Agent-AgentCore-",
+    case_study: {
+      executive_summary: "Engineered and deployed a containerized enterprise AI support agent on Amazon Bedrock AgentCore using the Strands SDK. By integrating Model Context Protocol (MCP) via AgentCore Gateway, sandboxed Code Interpreter execution, RAG knowledge bases, and dual-strategy long-term memory (Semantic Fact Extraction & Preferences), the agent automates complex multi-tier order tracking, returns, loyalty calculations, and browser navigation.",
+      business_problem: "Enterprise customer service channels suffer from high operational latency and financial inaccuracy caused by monolithic prompt bloat, LLM arithmetic hallucinations on multi-tier loyalty discounts, and fragmented cross-session user context across support calls.",
+      why_it_matters: "Decoupling API integrations via MCP and executing financial calculations inside a sandboxed Python runtime guarantees 100% mathematical precision while enabling cross-session personalization. This reduces average handle time (AHT) and eliminates costly billing/discount errors.",
+      my_role: [
+        {
+          role: "AI Platform Architect",
+          action: "Designed the AgentCore Gateway MCP integration, ARM64 CodeBuild container deployment pipeline, and IAM security policies."
+        },
+        {
+          role: "AI Systems Engineer",
+          action: "Implemented dual-strategy long-term memory (LTM), OpenAPI target schemas for API Gateway/Lambda targets, and sandboxed Code Interpreter tool execution."
+        }
+      ],
+      discovery_process: "Audited traditional RAG and agent setups, discovering that LLMs hallucinate complex multi-tier financial calculations (e.g., 10% Gold tier + 4,000 points redemption). Proved that arithmetic logic must be executed inside a sandboxed code interpreter while API integrations require strongly-typed MCP schemas.",
+      solution_architecture: "A containerized Python runtime on ARM64 deployed to Bedrock AgentCore. Features an MCP AgentCore Gateway interfacing with REST API Gateway (order-tracker) and AWS Lambda (refund-processor), an S3-backed Bedrock Knowledge Base, a sandboxed Code Interpreter for deterministic discount math, a headless browser tool, and AgentCore Memory (customer_facts and customer_preferences).",
+      governance_security: "Configured fine-grained IAM execution roles with restricted data-plane access, sandboxed Python Code Interpreter execution boundaries, structured OpenAPI target overrides, and SSE streaming transport security via AgentCore Gateway.",
+      commercial_intel_layer: "Extracts and persists customer preferences and facts into AgentCore Long-Term Memory across disparate session IDs. Produces structured execution logs and order state tracking to provide support leads with actionable customer behavior telemetry.",
+      results: "Successfully deployed and verified across 6 live cloud runtime test scenarios, demonstrating sub-second MCP order lookups, instant refund approvals (REF-L8OIRM1O), 100% accurate loyalty discount calculations ($150 order to $95 final total), and 35-second async LTM fact extraction across cross-session interactions.",
+      lessons_learned: "Never trust LLM probabilistic generation for financial calculations or direct API payload creation. Decoupling backend integration via MCP standards and delegating arithmetic to sandboxed execution environments is critical for enterprise reliability."
+    }
+  },
+  // Automatically generate the 10 placeholders for the 4x4 grid
+  ...Array.from({ length: 10 }, (_, i) => ({
+    id: i + 5,
     title: "Next Terminal Compiling...",
     short_desc: "Architectural blueprint in progress. System deployment scheduled.",
     tech_stack: ["Awaiting Stack"],
