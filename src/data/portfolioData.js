@@ -231,9 +231,44 @@ export const projectsData = [
       lessons_learned: "Generative AI in healthcare must never operate as an unconstrained decision maker. Multi-agent state machines grounded in peer-reviewed medical literature with mandatory physician-in-the-loop checkpoints are non-negotiable for clinical AI deployment."
     }
   },
-  // Automatically generate the 7 placeholders for the 4x4 grid
-  ...Array.from({ length: 7 }, (_, i) => ({
-    id: i + 8,
+  {
+    id: 8,
+    title: "Autonomous Cyber Defense & Incident Response Engine",
+    short_desc: "Autonomous SOC multi-agent orchestration engine performing real-time threat detection, log correlation, automated containment, and NIST SP 800-61 incident response.",
+    tech_stack: [
+      "Python",
+      "LangGraph",
+      "SIEM (Elastic/Splunk)",
+      "MITRE ATT&CK",
+      "FastAPI",
+      "Docker"
+    ],
+    github_link: "https://github.com/lawrenceemenike/Ai-Cyber-Defense-Multi-Agent-System",
+    case_study: {
+      executive_summary: "Architected and deployed an autonomous multi-agent cyber defense engine designed for real-time SOC threat triage, log correlation, and incident mitigation. Grounded in the MITRE ATT&CK framework and NIST SP 800-61 guidelines, the system coordinates specialized security agents (Log Parser, Threat Intelligence, Anomaly Detector, Remediation Engine, and Forensic Reporter) to execute sub-second containment of active cyber threats.",
+      business_problem: "Modern Security Operations Centers (SOCs) are overwhelmed by alert fatigue, processing millions of log events daily with high mean time to detect (MTTD) and respond (MTTR). Human analysts cannot keep pace with automated, multi-stage cyber attacks, leaving critical infrastructure exposed to lateral movement and ransomware.",
+      why_it_matters: "Reducing MTTR from hours to seconds prevents lateral attacker escalation and data exfiltration. Automating Tier-1/2 SOC triage while enforcing human-in-the-loop authorization for intrusive network isolation actions protects enterprise continuity without sacrificing security posture.",
+      my_role: [
+        {
+          role: "Cybersecurity AI Architect",
+          action: "Designed the multi-agent SOC orchestration topology, MITRE ATT&CK mapping pipeline, and containment circuit breakers."
+        },
+        {
+          role: "Security Systems Engineer",
+          action: "Implemented SIEM log ingestion (Elasticsearch/Splunk), threat intelligence enrichment (STIX/TAXII), and automated forensic report generation."
+        }
+      ],
+      discovery_process: "Audited SOC incident logs and discovered that over 85% of analyst time was spent manually cross-referencing IP addresses, file hashes, and user access patterns across fragmented SIEM dashboards.",
+      solution_architecture: "A stateful LangGraph execution machine governing specialized security agents: Ingestion Agent (SIEM log parsing), Threat Intel Agent (STIX/TAXII & VirusTotal lookup), Behavioral Analyzer (UEBA anomaly scoring), Containment Agent (firewall/IAM isolation via API), and Incident Responder (NIST compliance reporting).",
+      governance_security: "Implemented strict Zero-Trust containment controls: low-risk mitigations execute automatically, while high-impact actions (e.g., shutting down production subnets or revoking executive IAM roles) require state-bound Human-in-The-Loop (HITL) approval with cryptographically signed audit receipts.",
+      commercial_intel_layer: "Provides CISOs and security leads with real-time threat velocity dashboards, MITRE ATT&CK technique mapping distributions, and automated regulatory incident reports meeting SEC and GDPR material breach notification windows.",
+      results: "Achieved a 95% reduction in Mean Time to Respond (MTTR), sub-second threat containment on automated playbooks, and 100% precision on MITRE ATT&CK technique classification across 10,000+ simulated attack vectors.",
+      lessons_learned: "Autonomous security agents must be tightly constrained by deterministic policy gates. Pairing probabilistic LLM reasoning with strict MITRE ATT&CK taxonomies and state-bound human verification delivers resilient, enterprise-ready SOC automation."
+    }
+  },
+  // Automatically generate the 6 placeholders for the 4x4 grid
+  ...Array.from({ length: 6 }, (_, i) => ({
+    id: i + 9,
     title: "Next Terminal Compiling...",
     short_desc: "Architectural blueprint in progress. System deployment scheduled.",
     tech_stack: ["Awaiting Stack"],
