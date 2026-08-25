@@ -126,9 +126,44 @@ export const projectsData = [
       lessons_learned: "Never trust LLM probabilistic generation for financial calculations or direct API payload creation. Decoupling backend integration via MCP standards and delegating arithmetic to sandboxed execution environments is critical for enterprise reliability."
     }
   },
-  // Automatically generate the 10 placeholders for the 4x4 grid
-  ...Array.from({ length: 10 }, (_, i) => ({
-    id: i + 5,
+  {
+    id: 5,
+    title: "Multi-Agent Consensus & Cost-Optimized Research System",
+    short_desc: "Production multi-agent research framework combining an autonomous consensus loop with native OWASP security governance and an economic model router.",
+    tech_stack: [
+      "Python",
+      "CrewAI",
+      "FastAPI",
+      "Ollama",
+      "PostgreSQL",
+      "SearxNG"
+    ],
+    github_link: "https://github.com/lawrenceemenike/Multi-Agent-Research-System",
+    case_study: {
+      executive_summary: "Engineered a production-grade multi-agent research intelligence system integrating an autonomous consensus loop with a specialized Enterprise Middleware Suite. Featuring a native Agentic Governance Engine (3-tier OWASP ASI prompt injection firewall) and a Cost Optimization Router, the platform balances sub-5ms security interception, 100% local cost savings for routine processing, and rigorous LLM-as-a-Judge fact verification.",
+      business_problem: "Enterprise research workflows suffer from high frontier API costs (GPT-4o), prompt injection vulnerability during web scraping (ASI-03/ASI-05), and hallucinations in automated report generation when using single-pass LLMs.",
+      why_it_matters: "Decoupling security interception and dynamic cost routing protects corporate IP, eliminates unnecessary API spend, and delivers verified, hallucination-free intelligence reports suitable for executive decision-making.",
+      my_role: [
+        {
+          role: "AI Middleware Architect",
+          action: "Designed the Enterprise Middleware Suite containing the 3-tier Defense-in-Depth Governance Engine and the Cost Optimization Router."
+        },
+        {
+          role: "AI Systems Engineer",
+          action: "Implemented the multi-agent consensus loop (Researcher, Air-Gapped Writer, Fact-Checker), SearxNG scraping integration, and async PostgreSQL audit persistence."
+        }
+      ],
+      discovery_process: "Discovered that 80%+ of research queries do not require expensive frontier models and can be handled locally via Ollama/Mistral, while web scraping exposes agents to indirect prompt injections in untrusted HTML tags.",
+      solution_architecture: "A FastAPI research pipeline protected by AgenticGovernanceEngine (Layer 1 Regex <5ms, Layer 2 Cosine Similarity ~20ms, Layer 3 Gemma 2B Judge) and CostOptimizationRouter (routing tokens <8,000 to local Ollama and >8,000 or high-reasoning tasks to GPT-4o). Governs a CrewAI consensus loop where Researcher scrapes SearxNG, Air-Gapped Writer drafts in <untrusted_context>, and Fact-Checker verifies claims.",
+      governance_security: "Mapped OWASP ASI-01 through ASI-07: pre-compiled regex blocklist (<5ms), vector cosine similarity thresholding (>=0.85 via MiniLM), local Gemma 2B circuit breaker (2.0s timeout), PII/API key output sanitization, and <untrusted_context> XML context isolation.",
+      commercial_intel_layer: "Generates structured GovernanceDecisionReceipt and RoutingDecisionReceipt Pydantic audit logs persisted via async SQLAlchemy to PostgreSQL, providing complete traceability for compliance and cost auditing.",
+      results: "Delivered 100% cost savings on standard research tasks by routing to local inference engines, sub-5ms security threat interception, and verified zero-hallucination report outputs across automated test suites (16/16 passed in 0.31s).",
+      lessons_learned: "Single-pass LLMs cannot be trusted for deep research. Multi-agent consensus loops paired with deterministic security interceptors and cost routers are mandatory for cost-effective enterprise AI operations."
+    }
+  },
+  // Automatically generate the 9 placeholders for the 4x4 grid
+  ...Array.from({ length: 9 }, (_, i) => ({
+    id: i + 6,
     title: "Next Terminal Compiling...",
     short_desc: "Architectural blueprint in progress. System deployment scheduled.",
     tech_stack: ["Awaiting Stack"],
