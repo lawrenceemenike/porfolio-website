@@ -22,9 +22,43 @@ export const projectsData = [
       lessons_learned: "Non-deterministic models cannot be trusted with financial math. Decoupling the LLM's reasoning from the actual mathematical calculation is mandatory for enterprise safety."
     }
   },
-  // Automatically generate the 13 placeholders for the 4x4 grid
-  ...Array.from({ length: 13 }, (_, i) => ({
-    id: i + 2,
+  {
+    id: 2,
+    title: "NovaMart Multi-Agent Support & Policy Engine",
+    short_desc: "Enterprise multi-agent customer support system leveraging Bedrock AgentCore, Strands SDK, and parallel RAG retrieval for automated policy resolution and transactional execution.",
+    tech_stack: [
+      "AWS Bedrock",
+      "Strands SDK",
+      "Claude 3 Sonnet",
+      "DynamoDB",
+      "AWS Knowledge Bases"
+    ],
+    github_link: "https://github.com/lawrenceemenike/Multi-Agent-E-Commerce-RAG",
+    case_study: {
+      executive_summary: "Engineered and deployed a production-grade multi-agent customer support orchestrator on AWS Bedrock AgentCore using the Strands SDK. By orchestrating five specialized AI agents and parallel RAG retrievers over DynamoDB and Bedrock Knowledge Bases, the system automates end-to-end e-commerce order lookups, policy enforcement, refund processing, and empathetic customer communication with zero human intervention.",
+      business_problem: "E-commerce organizations face high support operational costs and high customer churn caused by slow ticket response times, fragmented customer data across legacy databases, and inconsistent policy enforcement during return/refund requests.",
+      why_it_matters: "Scaling customer operations without inflating support headcount is a direct lever for operating margin expansion. Automating routine tier-1 queries and refund approvals while enforcing strict policy guardrails protects bottom-line margins and elevates Net Promoter Scores (NPS).",
+      my_role: [
+        {
+          role: "AI Systems Architect",
+          action: "Designed the 5-agent micro-orchestration graph using Strands SDK and AWS Bedrock AgentCore, enforcing state machine isolation and optimistic locking."
+        },
+        {
+          role: "Cloud & MLOps Engineer",
+          action: "Provisioned the AWS infrastructure via CloudFormation, configured multi-domain Knowledge Base retrievers with ThreadPoolExecutor parallelism, and built 100% X-Ray/CloudWatch observability pipelines."
+        }
+      ],
+      discovery_process: "Audited typical e-commerce support tickets and identified that 80%+ of resolution delay stemmed from agents manually searching isolated policy PDFs (Returns, Shipping, Warranty) and cross-referencing customer tier data across disparate database tables.",
+      solution_architecture: "A hierarchical multi-agent state machine led by an OrchestratorAgent (Claude 3 Haiku) managing state in DynamoDB. Tasks route dynamically to specialized domain agents: InventoryAgent (order/customer lookups), PolicyAgent (coordinating 3 parallel policy retrievers via ThreadPoolExecutor), RefundAgent (tier-aware refund eligibility and DynamoDB write), and CommunicationAgent (generating empathetic final responses).",
+      governance_security: "Implemented AWS Bedrock Guardrails (Version 1) enforcing strict Content Filtering, PII Redaction, Topic Deny-lists, and Profanity Guarding. Secured state management via optimistic locking (version field) on DynamoDB WorkflowState and isolated CloudFormation stack permissions.",
+      commercial_intel_layer: "Real-time ticket telemetry and resolution states are tracked in DynamoDB and logged to CloudWatch with 100% X-Ray tracing sampling. This produces granular analytical visibility into refund velocity, policy inquiry frequency, and customer tier fulfillment performance.",
+      results: "Achieved a 100% perfect score (120/120 pts) across automated multi-agent orchestration, guardrail compliance, memory management, and tracing suites. Successfully automated tier-differentiated refund execution (30-day standard vs 60-day premium) and sub-second parallel policy retrieval across 3 distinct Knowledge Bases.",
+      lessons_learned: "Single monolithic LLM prompts crumble under complex enterprise workflows. Decoupling customer service into discrete, hyper-specialized sub-agents running parallel retrieval threads dramatically increases resolution accuracy, eliminates state corruption, and delivers predictable, audit-ready AI execution."
+    }
+  },
+  // Automatically generate the 12 placeholders for the 4x4 grid
+  ...Array.from({ length: 12 }, (_, i) => ({
+    id: i + 3,
     title: "Next Terminal Compiling...",
     short_desc: "Architectural blueprint in progress. System deployment scheduled.",
     tech_stack: ["Awaiting Stack"],
