@@ -56,9 +56,44 @@ export const projectsData = [
       lessons_learned: "Single monolithic LLM prompts crumble under complex enterprise workflows. Decoupling customer service into discrete, hyper-specialized sub-agents running parallel retrieval threads dramatically increases resolution accuracy, eliminates state corruption, and delivers predictable, audit-ready AI execution."
     }
   },
-  // Automatically generate the 12 placeholders for the 4x4 grid
-  ...Array.from({ length: 12 }, (_, i) => ({
-    id: i + 3,
+  {
+    id: 3,
+    title: "Agentic Security & Governance Runtime Engine",
+    short_desc: "Sub-5ms deterministic runtime control plane enforcing zero-trust boundaries, Ed25519 PKI, Atlas Merkle-DAG ledgers, and EU AI Act compliance for multi-agent LLM loops.",
+    tech_stack: [
+      "Python",
+      "LangGraph",
+      "Ed25519 PKI",
+      "Merkle-DAG",
+      "OpenTelemetry",
+      "PostgreSQL"
+    ],
+    github_link: "https://github.com/lawrenceemenike/Agentic-Security-and-Governance-Runtime-Engine",
+    case_study: {
+      executive_summary: "Architected and built agentic-gov, a sub-5ms deterministic runtime control plane and zero-trust cryptographic boundary for multi-agent LLM execution loops. The system wraps agent trajectories with real-time boundary enforcement, causal Merkle-DAG ledgers (Atlas engine), state-bound human checkpoints (Themis engine), and automated EU AI Act Annex IV regulatory documentation generation.",
+      business_problem: "Enterprise multi-agent deployments face severe regulatory liability (EU AI Act, GDPR, SEC disclosures) and security risks (prompt injection, unauthorized tool execution, PII leakage). Static compliance policies remain completely disconnected from real-time agent tool calls, memory mutations, and inter-agent message passing.",
+      why_it_matters: "Bridges the Governance-Execution Gap by decoupling agent decision velocity from corporate liability. Establishing cryptographically signed, legally defensible execution traces shifts liability from unmonitored probabilistic LLMs to provable, policy-bounded software controls while preventing statutory non-compliance penalties.",
+      my_role: [
+        {
+          role: "AI Security Architect",
+          action: "Designed the 5-layer runtime governance stack, Ed25519 zero-trust identity layer, and Themis state-bound human checkpoint engine."
+        },
+        {
+          role: "AI Systems Engineer",
+          action: "Implemented sub-5ms interception pipeline, Atlas Merkle-DAG causal ledger with RFC 8785 JCS canonicalization, and automated Annex IV audit exporters."
+        }
+      ],
+      discovery_process: "Identified that first-generation AI guardrails relying on secondary cloud LLM API calls fail due to probabilistic vulnerability, excessive latency (200-1500ms), and data exfiltration risks. Proved that runtime AI governance must be local, deterministic, and zero-cloud.",
+      solution_architecture: "A 5-Layer Governance Control Plane: Layer 1 Data Governance (GDPR Art 6/9/17 gates, crypto-shredding), Layer 2 Model Governance (3-tier ingress firewall, model hash commitments), Layer 3 System Integration (Ed25519 PKI, tool gates, circuit breakers), Layer 4 Continuous Monitoring (Stateful Trust Engine, PSI drift interceptor, egress DLP), Layer 5 Audit Evidence (Atlas Merkle-DAG, Themis human checkpoints, RFC 3161 timestamping).",
+      governance_security: "Enforced Ed25519 cryptographic signatures on all inter-agent envelopes, anti-replay sliding nonces (<1ms verification), pre-compiled regex & semantic prompt injection filters (<2ms p95), regex/SpaCy PII redaction, and anti-rubber-stamping dwell time triggers (<3000ms).",
+      commercial_intel_layer: "Provides continuous observability via OpenTelemetry GenAI semantic conventions and async PostgreSQL sinks. Generates machine-readable JSON audit packages and regulatory Markdown dossiers for statutory compliance (EU AI Act Annex IV, ISO 42001, NIST AI RMF).",
+      results: "Delivered a high-assurance governance engine operating with sub-5ms total hot-path overhead (<2.0ms regex, <1.0ms Ed25519, <0.5ms async queue). Guaranteed 100% non-repudiable causal lineage and offline EU AI Act compliance packaging in under 5.0s.",
+      lessons_learned: "Probabilistic LLM guardrails are fundamentally insufficient for enterprise runtime safety. Governance must be executed deterministically at the system level via cryptographic proofs, local state machines, and immutable Merkle-DAG ledgers."
+    }
+  },
+  // Automatically generate the 11 placeholders for the 4x4 grid
+  ...Array.from({ length: 11 }, (_, i) => ({
+    id: i + 4,
     title: "Next Terminal Compiling...",
     short_desc: "Architectural blueprint in progress. System deployment scheduled.",
     tech_stack: ["Awaiting Stack"],
