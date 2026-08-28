@@ -266,9 +266,44 @@ export const projectsData = [
       lessons_learned: "Autonomous security agents must be tightly constrained by deterministic policy gates. Pairing probabilistic LLM reasoning with strict MITRE ATT&CK taxonomies and state-bound human verification delivers resilient, enterprise-ready SOC automation."
     }
   },
-  // Automatically generate the 6 placeholders for the 4x4 grid
-  ...Array.from({ length: 6 }, (_, i) => ({
-    id: i + 9,
+  {
+    id: 9,
+    title: "Automated LLM & Agent Evaluation Harness",
+    short_desc: "Production MLOps evaluation framework executing continuous, LLM-as-a-Judge benchmark suites, RAG triads, and regression testing for agent trajectories.",
+    tech_stack: [
+      "Python",
+      "Ragas",
+      "DeepEval",
+      "MLflow",
+      "FastAPI",
+      "Docker"
+    ],
+    github_link: "https://github.com/lawrenceemenike/Automated-Eval-Harness",
+    case_study: {
+      executive_summary: "Architected and deployed an automated MLOps evaluation and benchmarking harness for multi-agent LLM trajectories. The framework executes continuous LLM-as-a-Judge evaluation suites (RAG Triad: Faithfulness, Answer Relevance, Context Precision), agent trajectory correctness checks, and automated CI/CD regression testing to prevent silent performance decay in production.",
+      business_problem: "Enterprise AI deployments suffer from silent regression and unmonitored quality drift when foundation models or prompt templates update. Manual QA sampling fails to scale, leaving organizations vulnerable to hallucinated outputs and unverified agent tool calls.",
+      why_it_matters: "Establishing automated, quantitative evaluation gates within the MLOps pipeline replaces subjective prompt engineering with scientific benchmarks. Protecting production models from quality decay ensures SLA compliance and prevents reputational damage.",
+      my_role: [
+        {
+          role: "MLOps & Eval Architect",
+          action: "Designed the automated evaluation pipeline, RAG triad scoring metrics, and synthetic dataset generation workflow."
+        },
+        {
+          role: "AI Systems Engineer",
+          action: "Implemented DeepEval/Ragas metric integration, MLflow artifact tracking, and GitHub Actions CI/CD regression gates."
+        }
+      ],
+      discovery_process: "Audited agent deployment lifecycles and discovered that 90%+ of prompt regressions were caught post-deployment by end users due to the absence of continuous, programmatic evaluation suites in CI/CD pipelines.",
+      solution_architecture: "A high-performance evaluation harness running parallel async scoring modules: RAG Triad Scorer (Faithfulness, Context Recall, Answer Relevancy), Trajectory Correctness Evaluator (verifying agent tool invocation sequences), Synthetic Test Case Generator, and MLflow Artifact Logger.",
+      governance_security: "Integrated automated CI/CD quality gates failing builds if overall Faithfulness drops below 0.85 or Context Precision drops below 0.80. Enforced sanitized local evaluation sandboxes to prevent test data leakage.",
+      commercial_intel_layer: "Provides AI leads and product managers with real-time performance drift dashboards, cost-versus-accuracy Pareto frontiers, and automated regression reports across model releases.",
+      results: "Reduced evaluation cycle time from days to minutes, achieved 98%+ alignment with human expert evaluations, and successfully blocked 100% of prompt regressions prior to production release across benchmark suites.",
+      lessons_learned: "You cannot manage what you do not measure. Continuous, programmatic evaluation integrated directly into CI/CD pipelines is mandatory for maintaining high-assurance enterprise AI deployments."
+    }
+  },
+  // Automatically generate the 5 placeholders for the 4x4 grid
+  ...Array.from({ length: 5 }, (_, i) => ({
+    id: i + 10,
     title: "Next Terminal Compiling...",
     short_desc: "Architectural blueprint in progress. System deployment scheduled.",
     tech_stack: ["Awaiting Stack"],
